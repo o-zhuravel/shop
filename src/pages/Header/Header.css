@@ -1,0 +1,33 @@
+.Header {
+    padding: 10px 20px;
+    background-color: burlywood;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Header nav a {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+.Header nav a:hover {
+    transform: scale(1.5);
+    color: crimson;
+}
+
+.Header nav .active {
+    transform: scale(1.5);
+    color: crimson;
+}
+
+.Header img {
+    width: 50px;
+}

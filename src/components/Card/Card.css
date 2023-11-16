@@ -1,0 +1,11 @@
+.Card {
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+}
+
+.Card img {
+    width: 80%;
+}
