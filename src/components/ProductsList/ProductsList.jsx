@@ -2,6 +2,7 @@ import './ProductsList.css';
 import Card from "../Card/Card";
 import {useEffect, useState} from "react";
 import axios from "axios";
+import Loader from "../Loader/Loader";
 
 const ProductsList = () => {
 
@@ -48,10 +49,10 @@ const ProductsList = () => {
                     .then(res=> {
                         console.log(res.data)
                         let sortArray = res.data.sort((a,b) => {
-                            if (a.price < b.price) {
+                            if (a.price > b.price) {
                                 return -1;
                             }
-                            if (a.price > b.price) {
+                            if (a.price < b.price) {
                                 return 1;
                             }
                             return 0;
@@ -67,10 +68,10 @@ const ProductsList = () => {
                     .then(res=> {
                         console.log(res.data)
                         let sortArray = res.data.sort((a,b) => {
-                            if (a.rating.rate < b.rating.rate) {
+                            if (a.rating.rate > b.rating.rate) {
                                 return -1;
                             }
-                            if (a.rating.rate > b.rating.rate) {
+                            if (a.rating.rate < b.rating.rate) {
                                 return 1;
                             }
                             return 0;
@@ -89,7 +90,7 @@ const ProductsList = () => {
         <div className='Products-list'>
             <div className='products-container'>
                 {
-                    products.length > 0 ? products.map(product => <Card product={product} key={product.id}/>) : <h1>Loading...</h1>
+                    products.length > 0 ? products.map(product => <Card product={product} key={product.id}/>) : <Loader/>
                 }
             </div>
             <div className='sort'>

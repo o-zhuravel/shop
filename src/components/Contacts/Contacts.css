@@ -1,6 +1,23 @@
 .Contacts {
     height: 85vh;
-    padding: 10px 5%;
+    padding: 10% 5%;
     box-sizing: border-box;
     background-color: rgba(176, 196, 222, 0.3);
+    display: flex;
+    justify-content: space-around;
+}
+
+.Contacts .maps {
+    width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+.Contacts .cont {
+
+}
+
+.Contacts .cont .social {
+    display: flex;
+    justify-content: space-between;
 }

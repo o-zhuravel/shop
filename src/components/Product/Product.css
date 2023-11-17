@@ -1,4 +1,6 @@
 .Product {
+    padding: 40px 5%;
+    box-sizing: border-box;
 }
 
 .Product .back-button {
@@ -20,6 +22,7 @@
 
 .Product .prod-container img {
     width: 30%;
+    margin-right: 40px;
 }
 
 .Product .prod-container .bay-button {

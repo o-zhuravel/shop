@@ -2,6 +2,7 @@ import './Product.css';
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {useNavigate, useParams} from "react-router";
+import Loader from "../Loader/Loader";
 
 const Product = () => {
     let [product, setProduct] = useState({});
@@ -38,7 +39,7 @@ const Product = () => {
 
                         </div>
                 </div>
-                    : <h1>Loading...</h1>
+                    : <Loader/>
             }
 
         </div>

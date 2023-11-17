@@ -1,0 +1,25 @@
+
+.Loader {
+    min-height: 85vh;
+}
+
+.Loader img {
+    text-align: center;
+    width: 30px;
+    animation: anim 3s infinite;
+}
+
+@keyframes anim {
+    0% {
+        scale: 1;
+        rotate: 0deg;
+    }
+    50% {
+        scale: 2;
+        rotate: 180deg;
+    }
+    100% {
+        scale: 1.5;
+        rotate: 360deg;
+    }
+}
