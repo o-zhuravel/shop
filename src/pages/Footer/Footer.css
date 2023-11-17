@@ -10,3 +10,12 @@
 .Footer div {
     justify-self: center;
 }
+
+.Footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.Footer a:hover {
+    color: #4a18ad;
+}

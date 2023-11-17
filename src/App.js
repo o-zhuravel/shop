@@ -9,7 +9,7 @@ import ProductsList from "./components/ProductsList/ProductsList";
 import Future from "./components/Future/Future";
 import Contacts from "./components/Contacts/Contacts";
 import Product from "./components/Product/Product";
-
+import AdminPanel from "./components/AdminPanel/AdminPanel";
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
             <Route path='/contacts' element={<Contacts/>}/>
             <Route path='/product' element={<Product/>}/>
             <Route path='/product/:productId' element={<Product/>}/>
+            <Route path='/admin-panel' element={<AdminPanel/>}/>
         </Routes>
         <Footer/>
     </div>
