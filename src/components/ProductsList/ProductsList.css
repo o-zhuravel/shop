@@ -1,0 +1,32 @@
+.Products-list {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    justify-content: space-between;
+    padding: 40px 5%;
+    box-sizing: border-box;
+    background-color: rgba(176, 196, 222, 0.3);
+}
+
+.Products-list .products-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 3%;
+    grid-row-gap: 20px;
+}
+
+.Products-list .sort {
+    justify-self: center;
+}
+
+.Products-list .sort select {
+    background-color: lightsteelblue;
+    font-family: Arial;
+    border: none;
+}
+
+.Products-list .sort option {
+    width: 80px;
+    color: #4a18ad;
+    background-color: lightsteelblue;
+    font-family: Arial;
+}

@@ -1,11 +1,30 @@
 .Card {
+    justify-self: center;
     padding: 20px;
     box-sizing: border-box;
     border: 1px solid black;
-    width: 200px;
+    width: 350px;
     text-align: center;
+    background-color: white;
 }
 
 .Card img {
     width: 80%;
+    height: 300px;
+}
+
+.Card .title {
+    height: 60px;
+    font-family: "Arial Black";
+}
+
+.Card .description {
+    height: 50px;overflow: hidden;
+    padding: 5px;
+}
+
+.Card .button {
+    box-shadow: 1px 5px white;
+    background-color: lightsteelblue;
+    cursor: pointer;
 }

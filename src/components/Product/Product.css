@@ -1,0 +1,27 @@
+.Product {
+}
+
+.Product .back-button {
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 10px;
+}
+
+.Product .back-button:hover {
+    color: #4a18ad;
+}
+
+.Product .prod-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    box-sizing: border-box;
+}
+
+.Product .prod-container img {
+    width: 30%;
+}
+
+.Product .prod-container .bay-button {
+
+}

@@ -1,6 +1,6 @@
 .Header {
     padding: 10px 20px;
-    background-color: burlywood;
+    background-color: lightsteelblue;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,12 +20,12 @@
 
 .Header nav a:hover {
     transform: scale(1.5);
-    color: crimson;
+    color: #4a18ad;
 }
 
 .Header nav .active {
     transform: scale(1.5);
-    color: crimson;
+    color: #4a18ad;
 }
 
 .Header img {

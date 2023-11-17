@@ -1,2 +1,13 @@
 .Main {
+    background-image: url("../../assets/img/banner.jpg");
+    background-size: unset;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60px;
+}
+
+.Main .text {
+    text-align: center;
+    color: white;
+    font-size: 50px;
 }

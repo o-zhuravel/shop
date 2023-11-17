@@ -2,7 +2,7 @@ import './Future.css';
 
 const Future = () => {
     return (
-        <div>
+        <div className='Future'>
             FUTURE
         </div>
     )

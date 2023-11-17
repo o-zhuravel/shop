@@ -25,12 +25,18 @@ const Product = () => {
             {
                 'id' in product ?
                     <div className='Product'>
-                    <div className='Back' onClick={comeBack}>Back to all products</div>
-                    PRODUCT
-                    <img src={product.image} alt={product.title}/>
-                    <h2>{product.title}</h2>
-                    <h3>{}</h3>
-                    <p className='description'>{product.description}</p>
+                    <div className='back-button' onClick={comeBack}>Back to all products</div>
+                        <div className='prod-container'>
+                            <img src={product.image} alt={product.title}/>
+                            <div className='info'>
+                                <h2>{product.title}</h2>
+                                <h3>category: {product.category}</h3>
+                                <h4>rating: {product.rating.rate}</h4>
+                                <p className='description'>{product.description}</p>
+                                <h3>price: {product.price}<span>$</span></h3>
+                            </div>
+
+                        </div>
                 </div>
                     : <h1>Loading...</h1>
             }

@@ -1,0 +1,12 @@
+.Footer {
+    padding: 20px 5%;
+    box-sizing: border-box;
+    background-color: lightsteelblue;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.Footer div {
+    justify-self: center;
+}

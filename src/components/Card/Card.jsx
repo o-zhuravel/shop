@@ -13,11 +13,12 @@ const Card = (product) => {
     return (
         <div className='Card'>
             <img src={product.product.image} alt={product.product.title}/>
-            <h2>title {product.product.title}</h2>
-            <h3>price: {} <span>$</span></h3>
-            <p className='category'>category {}</p>
-            <p className='description'>description {product.product.description}</p>
-            <button onClick={() => showMoreHandler()}>show more</button>
+            <div className='title'>{product.product.title}</div>
+            <h3>price: {product.product.price} <span>$</span></h3>
+            <p className='category'>category: {product.product.category}</p>
+            <p className='rating'>rating: {product.product.rating.rate}</p>
+            <div className='description'>{product.product.description}</div>
+            <div className='button' onClick={() => showMoreHandler()}>show more</div>
         </div>
     )
 }
