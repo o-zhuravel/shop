@@ -1,8 +1,10 @@
 import './Product.css';
 import {useEffect, useState} from "react";
-import axios from "axios";
 import {useNavigate, useParams} from "react-router";
 import Loader from "../Loader/Loader";
+import data from '../../data/data';
+import ReviewList from "../ReviewList/ReviewList";
+import ProductsList from "../ProductsList/ProductsList";
 
 const Product = () => {
     let [product, setProduct] = useState({});
@@ -10,11 +12,7 @@ const Product = () => {
     const navigation = useNavigate();
 
     useEffect(() => {
-            axios.get(`https://fakestoreapi.com/products/${productId}`)
-                .then(res=> {
-                    console.log(res)
-                    setProduct(res.data)
-                });
+            setProduct(data.prod[productId-1]);
         }, []);
 
     function comeBack () {
@@ -36,8 +34,8 @@ const Product = () => {
                                 <p className='description'>{product.description}</p>
                                 <h3>price: {product.price}<span>$</span></h3>
                             </div>
-
                         </div>
+                        <ReviewList productId={productId} key={productId}/>
                 </div>
                     : <Loader/>
             }

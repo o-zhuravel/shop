@@ -7,6 +7,7 @@ const Card = (product) => {
     const navigate = useNavigate();
 
     function showMoreHandler () {
+        console.log(product.product.id)
         navigate(`/product/${product.product.id}`);
     }
 

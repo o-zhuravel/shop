@@ -1,5 +1,38 @@
 .Admin-panel {
-    height: 85vh;
     padding: 20px 5%;
     box-sizing: border-box;
+}
+
+.Admin-panel .add-container {
+    width: 40%;
+    margin: 20px auto;
+    border: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.Admin-panel .add-container .add-btn {
+    width: 140px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background: lightsteelblue;
+    margin-top: 10px;
+}
+
+.Admin-panel .delete-container {
+    width: 40%;
+    margin: 20px auto;
+    border: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.Admin-panel .delete-container .delete-btn {
+    width: 140px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background: lightsteelblue;
+    margin-top: 10px;
 }

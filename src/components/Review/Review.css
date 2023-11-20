@@ -1,0 +1,7 @@
+.Review {
+    border: 1px solid black;
+    max-width: 80%;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}

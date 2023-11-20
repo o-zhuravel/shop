@@ -1,5 +1,4 @@
 .Contacts {
-    height: 85vh;
     padding: 10% 5%;
     box-sizing: border-box;
     background-color: rgba(176, 196, 222, 0.3);
@@ -18,6 +17,11 @@
 }
 
 .Contacts .cont .social {
+    width: 60%;
     display: flex;
     justify-content: space-between;
+}
+
+.Contacts .cont .social img {
+    width: 50px;
 }

@@ -1,54 +1,42 @@
 import './ProductsList.css';
 import Card from "../Card/Card";
 import {useEffect, useState} from "react";
-import axios from "axios";
 import Loader from "../Loader/Loader";
+import data from '../../data/data';
 
 const ProductsList = () => {
 
     let [products, setProducts] = useState([]);
 
     useEffect(() => {
-        axios.get('https://fakestoreapi.com/products')
-                .then(res=> {
-                    console.log(res.data)
-                    setProducts(res.data)
-                })
+        setProducts(data.prod);
     }, []);
 
     let sorting = (param) => {
-        console.log(param);
         switch (param) {
             case 'category' :
-                axios.get('https://fakestoreapi.com/products')
-                    .then(res => {
 
-                        let sortArray = [];
+                let sortArrayCategory = [];
+                data.prod.filter(prod => prod.category === 'jewelery').forEach(pr => {
+                    sortArrayCategory.push(pr)
+                });
 
-                        res.data.filter(prod => prod.category === 'jewelery').forEach(pr => {
-                            sortArray.push(pr)
-                        });
+                data.prod.filter(prod => prod.category === 'women\'s clothing').forEach(pr => {
+                    sortArrayCategory.push(pr)
+                });
 
-                        res.data.filter(prod => prod.category === 'women\'s clothing').forEach(pr => {
-                            sortArray.push(pr)
-                        });
+                data.prod.filter(prod => prod.category === 'men\'s clothing').forEach(pr => {
+                    sortArrayCategory.push(pr)
+                });
 
-                        res.data.filter(prod => prod.category === 'men\'s clothing').forEach(pr => {
-                            sortArray.push(pr)
-                        });
+                data.prod.filter(prod => prod.category === 'electronics').forEach(pr => {
+                    sortArrayCategory.push(pr)
+                });
 
-                        res.data.filter(prod => prod.category === 'electronics').forEach(pr => {
-                            sortArray.push(pr)
-                        });
-
-                        setProducts(sortArray);
-                    })
+                setProducts(sortArrayCategory);
                 break;
             case 'price' :
-                axios.get('https://fakestoreapi.com/products')
-                    .then(res=> {
-                        console.log(res.data)
-                        let sortArray = res.data.sort((a,b) => {
+                        let sortArrayPrice = data.prod.sort((a,b) => {
                             if (a.price > b.price) {
                                 return -1;
                             }
@@ -58,16 +46,11 @@ const ProductsList = () => {
                             return 0;
                         });
 
-                        console.log(sortArray)
+                        setProducts(sortArrayPrice);
 
-                        setProducts(sortArray);
-                    })
                 break;
             case 'rating' :
-                axios.get('https://fakestoreapi.com/products')
-                    .then(res=> {
-                        console.log(res.data)
-                        let sortArray = res.data.sort((a,b) => {
+                        let sortArrayRate = data.prod.sort((a,b) => {
                             if (a.rating.rate > b.rating.rate) {
                                 return -1;
                             }
@@ -77,10 +60,8 @@ const ProductsList = () => {
                             return 0;
                         });
 
-                        console.log(sortArray)
+                        setProducts(sortArrayRate);
 
-                        setProducts(sortArray);
-                    })
                 break;
         }
 

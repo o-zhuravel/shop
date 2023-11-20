@@ -1,0 +1,21 @@
+.Review-list {
+
+}
+
+.Review-list .add-review {
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.Review-list .add-review .add-review-btn {
+    margin-top: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    width: max-content;
+    background-color: lightsteelblue;
+    transition: 0.5s;
+}
+
+.Review-list .add-review .add-review-btn:active {
+    scale: 1.5;
+}
